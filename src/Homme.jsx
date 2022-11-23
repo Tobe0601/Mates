@@ -1,5 +1,5 @@
 import React from "react";
-import Products from "./components/Productss";
+import Productss from "./components/Productss";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Products />
+      <Productss />
     </div>
   );
 }
