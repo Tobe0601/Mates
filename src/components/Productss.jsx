@@ -13,7 +13,7 @@ export default function Products() {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch("https://fakestoreapi.com/products");
+      const response = await fetch("http://127.0.0.1:8000");
       if (componentMounted) {
         setData(await response.clone().json());
         setFilter(await response.json());
@@ -64,29 +64,29 @@ export default function Products() {
           </button>
           <button
             className="btn btn-outline-dark me-2"
-            onClick={()=>filterProduct("men's clothing")}
+            onClick={()=>filterProduct("shirt")}
           >
-            Men's clothing
+            shirt
           </button>
           <button
             className="btn btn-outline-dark me-2"
-            onClick={()=>filterProduct("women's clothing")}
+            onClick={()=>filterProduct("pants")}
           >
-            Women's clothing
+            pants
           </button>
           <button
             className="btn btn-outline-dark me-2"
-            onClick={()=>filterProduct("jewelery")}
+            onClick={()=>filterProduct("shorts")}
           >
-            Jewelery
+            short
           </button>
           <button
             className="btn btn-outline-dark me-2"
-            onClick={()=>filterProduct("electronics")}
+            onClick={()=>filterProduct("shoes")}
           >
-            Electronic
+            shoes
           </button>
-        </div>
+          </div>
         {filter.map((product) => {
           return (
             <>

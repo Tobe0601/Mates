@@ -19,7 +19,7 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       setLoading(true);
-      const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+      const response = await fetch(`http://127.0.0.1:8000${id}`);
       setProduct(await response.json());
       setLoading(false);
     };
